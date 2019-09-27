@@ -1,0 +1,7 @@
+# Base
+Flask
+Flask-Script
+flask-sqlalchemy
+Flask-Admin
+flask-cors
+flask-caching

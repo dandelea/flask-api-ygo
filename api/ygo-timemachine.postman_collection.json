@@ -1,0 +1,100 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ygo-timemachine",
+		"_postman_id": "41aafb45-6ffb-b81d-053d-68b523400785",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/cards",
+			"request": {
+				"url": "{{protocol}}://{{hostname}}:{{port}}/api/cards",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"attributes\": [],\n\t\"species\": [\"reptile\"],\n\t\"stars\": [2],\n\t\"monster_types\": [],\n\t\"spell_families\": [],\n\t\"trap_families\": [],\n\t\"archetypes\": [],\n\t\"order\": \"name\",\n\t\"inverse\" : false\n}"
+				},
+				"description": "Query a collection of cards.\nFilter and order."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/values",
+			"request": {
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}:{{port}}/api/values?table=&field=",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"values"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "",
+							"description": "sqlalchemy"
+						},
+						{
+							"key": "field",
+							"value": "",
+							"description": "sqlalchemy"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Returns a list of all possible values of a field found in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/card",
+			"request": {
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}:{{port}}/api/card?codepass",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"card"
+					],
+					"query": [
+						{
+							"key": "codepass",
+							"value": "",
+							"equals": false,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
